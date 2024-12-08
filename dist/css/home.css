@@ -1,0 +1,103 @@
+:root{
+    --line-color: hsl(var(--hue), 15%, 50%);
+    --transition-duration: .3s;
+    --blur-effect: blur(16px);
+}
+
+
+.card__highlight{
+    padding: 2rem;
+    display: grid;
+    place-items: center;
+}
+
+.wrapped__card{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 1200px;
+    width: 100%;
+}
+
+.card{
+    background-color: var(--container-color);
+    border: 1px solid var(--line-color);
+    border-radius: .5rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.card__image{
+    width: 100%;
+    height: 25rem;
+    overflow: hidden;
+
+    transition: transform .3s ease;
+}
+
+.card:hover .card__image{
+    transform: scale(1.05);
+}
+
+.card__img{
+    height: 100%;
+    width: 100%;
+    object-position: 0% 10%;
+    object-fit: cover;
+    transition: .3s ease;
+}
+
+.card:hover .card__img{
+    transform: scale(1.05);
+}
+
+.card__info{
+    padding: 1rem;
+    text-align: left;
+    color: var(--text-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transform: translateY(100%);
+    background: hsla(0,0%,0%,.5);
+    backdrop-filter: var(--blur-effect);
+    border-top: 10 px solid var(--line-color);
+    border-radius: .5rem .5rem 0 ;
+    transition: transform var(--transition-duration) ease, opacity var(--transition-duration) ease;
+}
+
+.card:hover .card__info{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card__title{
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+    margin-bottom: .5rem;
+}
+
+.card__desc{
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .wrapped__card {
+        grid-template-columns: 1fr;
+    }
+}
