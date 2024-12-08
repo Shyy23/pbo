@@ -121,6 +121,7 @@
             <!-- ================= MAIN  ===================== -->
              <main class="main container" id="main">
                 <section class="card__highlight grid">
+                    <h1 class="title__highlight section__title">Available Access</h1>
                     <div class="wrapped__card grid">
                         <article class="card">
                             <a href="view/tabel/view_barang.php" class="card__link">

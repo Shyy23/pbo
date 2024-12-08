@@ -18,9 +18,9 @@ const toPDF = function(table){
     const html_code = `
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
-    <link rel="stylesheet" href="../dist/css/hamburgers.css">
-    <link rel="stylesheet" href="../dist/css/style.css">
-    <link rel="stylesheet" href="../dist/css/table.css">
+    <link rel="stylesheet" href="../../dist/css/hamburgers.css">
+    <link rel="stylesheet" href="../../dist/css/style.css">
+    <link rel="stylesheet" href="../../dist/css/table.css">
 
     <body">${table.innerHTML}</body>
     `;
