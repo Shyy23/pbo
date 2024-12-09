@@ -158,7 +158,7 @@ require_once '../../control/barang/proses_barang.php';
                         <tbody id="table-body-barang">                                    
                             <?php foreach($barangManager->getBarang() as $barang):?>
                             <tr class="row">
-                                <td class="td"><?= $barang['id']?></td>
+                                <td class="td"><?= $barang['no']?></td>
                                 <td class="td"><?= $barang['nama']?></td>
                                 <td class="td"><?= $barang['harga']?></td>
                                 <td class="td"><?= $barang['stok']?></td>

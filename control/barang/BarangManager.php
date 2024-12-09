@@ -11,9 +11,12 @@ class BarangManager {
     }
 
     // Menambahkan Barang
-    public function tambahBarang( $nama,$harga, $stok){
+    public function tambahBarang( $nama,$harga, $stok): void{
         $id = uniqid();
-        $barang = new Barang($id, $nama, $harga, $stok);
+        $no = count($this->barangList) + 1; 
+        $barang = new Barang($id, $nama, $harga, $stok, $no);
+
+
         $this->barangList[] = $barang;
         $this->simpanData();
     }

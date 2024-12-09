@@ -13,7 +13,9 @@ class CustomerManager {
 
     public function tambahCustomer($nama_customer, $contact_customer, $alamat_customer, $pref_produk){
         $id = uniqid();
-        $customer = new Customer($id, $nama_customer, $contact_customer, $alamat_customer, $pref_produk);
+        $no = count($this->customerList) + 1; 
+
+        $customer = new Customer($id, $nama_customer, $contact_customer, $alamat_customer, $pref_produk, $no);
         $this->customerList[] = $customer;
         $this->simpanData();
     }

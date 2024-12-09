@@ -159,7 +159,7 @@ require_once '../../control/customer/proses_customer.php';
                             <tbody id="table-body-customer">
                                 <?php foreach($customerManager->getCustomer() as $customer):?>
                                 <tr class="tr">
-                                <td class="td"><?= $customer['id']?></td>
+                                <td class="td"><?= $customer['no']?></td>
                                 <td class="td"><?= $customer['nama']?></td>
                                 <td class="td"><?= $customer['contact']?></td>
                                 <td class="td"><?= $customer['alamat']?></td>
